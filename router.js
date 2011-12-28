@@ -1,7 +1,7 @@
-function route(handle, pathname, response) {
+function route(handle, pathname, response, postData) {
     console.log("about to route to " + pathname);
     if (typeof handle[pathname] === 'function') {
-        handle[pathname](response);
+        handle[pathname](response, postData);
     }
     else {
         console.log("and that would be a 404");
